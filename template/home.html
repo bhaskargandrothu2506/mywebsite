@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheryians Coding School</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <!-- Transparent Navbar -->
+    <header id="header">
+        <div class="logo">👨‍💻 Sheryians Coding School</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="{% url 'myapp1:courses' %}">Courses</a>
+            <a href="{% url 'myapp1:bootcamp' %}">Bootcamp(Kodr)</a>
+            <a href="{% url 'myapp1:callback' %}">Request Callback</a>
+            <a href="{% url 'myapp1:signin' %}" class="btn-signin">Sign In</a>
+        </nav> 
+        
+    </header>
+    
+    <!-- Hero Section -->
+     <!-- {% block nav %} -->
+    <section id="home" class="hero">
+        <h1>We only <span>teach</span><br> what we are really<br> really <i>good</i> at.</h1>
+       <span><p>Get ready to <span style="color: #00d4b3;">accelerate<br>your career</span> with customized courses<br>and leave your mark in the tech <br>industry</p><br></span>
+         <span><center><a href="{% url 'myapp1:courses' %}" id="checkButton">Check Courses - Make an Impact</a></center></span>
+    </section>
+    
+    <!-- Stats Section -->
+    <section id="courses" class="stats">
+        <div>
+            <strong>25K+</strong>
+            <br>Students taught
+        </div>
+        <div>
+            <strong>20+</strong>
+            <br>Instructors
+        </div>
+        <div>
+            <strong>431K+</strong>
+            <br>Youtube Subs.
+        </div>
+    </section>
+    {% endblock nav %}
+    <span><center><p><big><big><h4>We do whatever it takes <br> to help you <br> </h4></big></big></p> </center></span>
+    <span style="color: #00d4b3;"><center>understand the  concepts.</center></span><br><br>
+    <center><iframe width="560" height="315" src="https://www.youtube.com/embed/60SRAWmMXyc?si=1NFN0ArqYAsJ1EcG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center> <br><br>
+    <span><center><a href="#" id="checkButton" style="color: #00d4b3;"> Explore free learing</a></center></span><br><br><br>
+
+    <div class="container">
+        <!-- Course Card Template -->
+        <div class="card" data-course="Threads Domination" data-price="₹2499">
+            <img src="../static/img1" alt="Course Image">
+            <div class="card-content">
+                <h3>Threads Domination</h3><br><br><br><br><br><br>
+                <p>₹2499</p>
+                <div class="btn">View Details</div>
+            </div>
+        </div>
+        <div class="card" data-course="Java & DSA Domination" data-price="₹4999">
+            <img src="../static/img2" alt="Course Image">
+            <div class="card-content">
+                <h3>Java & DSA Domination</h3><br><br><br><br><br><br>
+                <p>₹4999</p>
+                <div class="btn">View Details</div>
+            </div>
+        </div>
+        <div class="card" data-course="Java & DSA Domination" data-price="₹4999">
+            <img src="../static/img3" alt="Course Image">
+            <div class="card-content">
+                <h3>Java & DSA Domination</h3><br><br><br><br><br><br>
+                <p>₹4999</p>
+                <div class="btn">View Details</div>
+            </div>
+        </div>
+        <div class="card" data-course="Back-End Domination" data-price="₹6999">
+            <img src="../static/img4" alt="Course Image">
+            <div class="card-content">
+                <h3>Back-End Domination</h3><br><br><br><br><br><br>
+                <p>₹6999</p>
+                <div class="btn">View Details</div>
+            </div>
+        </div>
+        <div class="card" data-course="Java & DSA Domination" data-price="₹4999">
+            <img src="../static/img5" alt="Course Image">
+            <div class="card-content">
+                <h3>Java & DSA Domination</h3><br><br><br><br><br><br>
+                <p>₹4999</p>
+                <div class="btn">View Details</div>
+            </div>
+            
+    </div>
+
+
+
+
+    
+
+    <!-- Link to External JS File -->
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>

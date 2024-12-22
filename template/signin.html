@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            width: 300px;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px 20px;
+            margin: 0 5px;
+            border-bottom: 2px solid transparent;
+        }
+
+        .tab.active {
+            border-bottom: 2px solid white;
+        }
+
+        .form {
+            display: none;
+        }
+
+        .form.active {
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .button {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button div {
+            background-color: gray;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .button div:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign In</h1>
+        <div class="tabs">
+            <div class="tab active" id="phone-tab">Phone</div>
+            <div class="tab" id="email-tab">Email</div>
+        </div>
+        
+        <div id="phone-form" class="form active">
+            <input type="text" placeholder="Enter Your Mobile Number">
+        </div>
+
+        <div id="email-form" class="form">
+            <input type="text" placeholder="Enter Your Email">
+            <input type="password" placeholder="Enter Your Password">
+        </div>
+
+        <div class="button">
+            <div>Continue with Google</div>
+            <div>Create a New Account</div>
+        </div>
+    </div>
+
+    <script>
+        const phoneTab = document.getElementById('phone-tab');
+        const emailTab = document.getElementById('email-tab');
+        const phoneForm = document.getElementById('phone-form');
+        const emailForm = document.getElementById('email-form');
+
+        phoneTab.addEventListener('click', () => {
+            phoneTab.classList.add('active');
+            emailTab.classList.remove('active');
+            phoneForm.classList.add('active');
+            emailForm.classList.remove('active');
+        });
+
+        emailTab.addEventListener('click', () => {
+            emailTab.classList.add('active');
+            phoneTab.classList.remove('active');
+            emailForm.classList.add('active');
+            phoneForm.classList.remove('active');
+        });
+    </script>
+</body>
+</html>

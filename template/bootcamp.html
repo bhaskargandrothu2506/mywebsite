@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sheryians Coding School</title>
+  <style>
+    /* General styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Hero section styles */
+    .hero-section {
+      padding: 20px;
+      text-align: center;
+      background-color: #000;
+    }
+
+    .hero-content h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .hero-content .highlight {
+      color: #00cc66;
+    }
+
+    .button-container button {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cta-buttons .cta {
+      margin: 10px;
+      padding: 10px 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .cta.buy-now {
+      background: #00cc66;
+      color: #fff;
+    }
+
+    /* Dropdown styles */
+    .dropdown {
+      padding: 20px;
+      background: #000;
+    }
+
+    .dropdown-item {
+      margin: 10px 0;
+    }
+
+    .dropdown-header {
+      width: 100%;
+      padding: 15px;
+      background: #333;
+      color: #fff;
+      text-align: left;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      background: #222;
+      padding: 15px;
+      margin-top: 5px;
+      border-radius: 5px;
+    }
+
+    .dropdown-header:hover + .dropdown-content,
+    .dropdown-header:focus + .dropdown-content {
+      display: block;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 1.8em;
+      }
+
+      .button-container button,
+      .cta-buttons .cta {
+        padding: 8px 15px;
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>We believe in, <span class="highlight">Consistency.</span> No shortcuts.</h1>
+      <div class="button-container">
+        <button>MERN Stack ⚡</button>
+        <button>Data Structures & Algorithm 🛠️</button>
+        <button>DBMS - SQL 🤘</button>
+        <button>CORE CS Subjects ⚙️</button>
+        <button>Placement Assistance 📋</button>
+      </div>
+      <div class="cta-buttons">
+        <button class="cta">Courses</button>
+        <button class="cta">Request Callback</button>
+        <button class="cta buy-now">Buy Now - ₹</button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="dropdown">
+      <div class="dropdown-item">
+        <button class="dropdown-header">HTML/CSS</button>
+        <div class="dropdown-content">
+          <p>Learn the basics of web design with HTML and CSS.</p>
+        </div>
+      </div>
+      <div class="dropdown-item">
+        <button class="dropdown-header">JavaScript</button>
+        <div class="dropdown-content">
+          <p>Master JavaScript to create dynamic and interactive web pages.</p>
+        </div>
+      </div>
+      <div class="dropdown-item">
+        <button class="dropdown-header">React JS</button>
+        <div class="dropdown-content">
+          <p>Build user interfaces efficiently with React JS.</p>
+        </div>
+      </div>
+      <div class="dropdown-item">
+        <button class="dropdown-header">Data Structures and Algorithms (DSA)</button>
+        <div class="dropdown-content">
+          <p>Enhance problem-solving skills with DSA concepts.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
